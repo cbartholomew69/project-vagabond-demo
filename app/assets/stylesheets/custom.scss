@@ -18,3 +18,13 @@
 .post_image {
   height: 200px;
 }
+
+.post_show_container {
+  display: flex;
+}
+
+
+.post_show_image_container {
+  display: flex;
+  flex-direction: column;
+}
