@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-
+    @city = City.find(params[:city_id])
+    @post = @city.posts.new
   end
 end
