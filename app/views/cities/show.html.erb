@@ -1,3 +1,12 @@
 <h2><%= @city.name %></h2>
 
 <%= image_tag(@city.photo, alt: "Photo of Atlanta", class: "city_image") %>
+
+<% @posts.each do |post| %>
+  <div>
+    <p><strong><%= post.title %></strong></p>
+    <p><%= post.content %></p>
+    <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
+  </div>
+<% end %>
+
