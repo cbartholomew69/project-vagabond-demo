@@ -4,7 +4,7 @@
 
 <% @posts.each do |post| %>
   <div>
-    <p><strong><%= post.title %></strong></p>
+    <p><strong><%= link_to post.title, "/cities/#{post.city_id}/posts/#{post.id}" %></strong></p>
     <p><%= post.content %></p>
     <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
   </div>
