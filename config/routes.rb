@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+get 'cities/:city_id/posts/new', to: 'posts#new', as: 'post_new'
+
 get '/cities/:id', to: 'cities#show', as: 'city'
 
 get 'cities/:id/posts/:id', to: 'posts#show', as: 'post'
