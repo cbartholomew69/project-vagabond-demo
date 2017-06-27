@@ -1,1 +1,10 @@
-<h1>Post Show Page</h1>
+<section class='post_show_container'>
+  <div class="post_show_image_container">
+    <%= image_tag(@post.photo, alt: "Photo from the post #{@post.title}", class: "post_show_photo") %>
+    <%= @post.created_at %>
+  </div>
+  <div>
+    <h5><%= @post.title %> | <small><%= link_to @post.city.name, city_path(@post.city.id) %></small></h5>
+    <p><%= @post.content %></p>
+  </div>
+</section>
