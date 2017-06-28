@@ -11,7 +11,8 @@
     <div class='city_show_post_info'>
       <p class= 'city_show_post_link'><strong><%= post.title %></strong></p>
       <p><%= truncate(post.content, :length => 1000) %></p>
-      <p><small><%= "Posted by: #{post.user.email} at: #{post.created_at}" %></small></p>
+      <p><small><%= "Posted by: #{post.user.email} " %>
+      <%= timeago_tag post.created_at, :date_only => true %></small></p>
     </div>
   </div>
 </a>

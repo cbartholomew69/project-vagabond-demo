@@ -44,6 +44,13 @@ gem 'devise'
 #For authorization
 gem 'cancancan'
 
+#For non-absolute time-stamps
+gem 'rails-timeago'
+
+#jquery install
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+#For pretty print routes
 gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
