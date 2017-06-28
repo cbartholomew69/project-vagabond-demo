@@ -14,20 +14,18 @@
         <%= link_to "Project Vagabond", root_path, class: "brand-logo" %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#">Vagabond Cities</a></li>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
+          <% if user_signed_in? %>
+            <li><small>Logged in as <%= current_user.email %>.</small></li>|
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>|
+            <li><%= link_to "Login", new_user_session_path  %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path  %>
-    <% end %>
+    <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
 </html>
