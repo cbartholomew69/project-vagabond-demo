@@ -1,9 +1,11 @@
 .home_page_image {
   background-image: url(http://i.imgur.com/kXABrSc.jpg);
 }
+
 .atlanta_image {
   background-image: url('http://i.imgur.com/WwnFRvM.jpg?2');
 }
+
 .city_hero_image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +87,7 @@
 }
 
 .btn-large {
-    width: 325px;
+    width: 330px;
   }
 
 .post_show_container {
@@ -113,17 +115,23 @@
 
 .form_wrapper {
   margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  min-width: 750px;
   border: 1px solid gray;
   border-radius: 8px;
-  width: 960px;
   padding: 15px;
 }
 
 .form_page_header {
   margin: 40px;
+  text-align: center;
 }
 
 .input_field {
@@ -131,15 +139,12 @@
 }
 
 #form_textarea {
-  height: 300px;
-  width: 900px;
+  min-height: 200px;
   margin-top: 2px;
 }
 
-#post_title_field {
-  width: 900px;
-}
-
-#post_image_field {
-  width: 900px;
+.form_button_container {
+  display: flex;
+  margin: 15px;
+  justify-content: space-between;
 }

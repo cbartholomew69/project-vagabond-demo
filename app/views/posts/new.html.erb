@@ -1,31 +1,5 @@
-<h3 class='form_page_header'>Enter details for your new post</h3>
-
-<div class='form_wrapper'>
-
-  <%= form_for [@city, @post], :html => {:class => "col l12"} do |f| %>
-    <div class='form'>
-      <div class='input-field inline col l12' id="post_title_field">
-        <%= f.label :title, :class => "active" %>
-        <%= f.text_field :title %>
-      </div>
-      <br>
-      <div class='input-field inline col l12'>
-        <%= f.label :content, :class => "active" %>
-        <%= f.text_area :content, :id => "form_textarea" %>
-      </div>
-      <br>
-      <div class='input-field inline col l12' id="post_image_field">
-        <%= f.label :photo, "Image URL", :class => "active" %>
-        <%= f.text_field :photo %>
-      </div>
-    </div>
-    <br>
-    <%= f.submit "Create Post", :class => 'waves-effect waves-light btn-large' %>
-  <% end %>
-  <br>
-    <%= link_to "Back", "/cities/#{@city.id}", class: "waves-effect waves-light btn-large" %>
-</div>
-
+<h4 class='form_page_header'><%= "Enter details for your new post about #{@city.name}" %></h4>
+<%= render partial: 'form' %>
 
 
 

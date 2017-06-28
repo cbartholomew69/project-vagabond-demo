@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    #need to fix this with strong params
     @post = Post.create(city_id: request.params["city_id"],
                         user_id: current_user.id,
                         title: request.params["post"]["title"],
@@ -25,17 +26,20 @@ class PostsController < ApplicationController
     redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
   end
 
-
   def edit
     @post = Post.find(params[:id])
+    @city = @post.city
   end
 
   def update
-  @post = Post.find(params[:id])
-  @post.update(title: params[:title], content: params[:content])
-  redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
-end
-
+    #need to use the params method here too
+    @city = City.find(params[:city_id])
+    @post = Post.find(params[:id])
+    @post.update(title: params["post"]["title"],
+                 content: params["post"]["content"],
+                 photo: params["post"]["photo"])
+    redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
+  end
 
   def destroy
     @post = Post.find(params[:id])
