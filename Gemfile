@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 #For styling
 gem 'materialize-sass'
 
+gem 'jquery-turbolinks'
+
 #For authentication
 gem 'devise'
 

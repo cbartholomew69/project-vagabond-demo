@@ -3,6 +3,7 @@ class Ability
 
     def initialize(user)
         user
+        #this is where we could add admin privileges as a stretch goal
             can [:create, :update, :destroy], City do |city|
             end
         user ||= User.new # guest user (not logged in)
