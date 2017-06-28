@@ -1,4 +1,4 @@
-<h3>Enter details for your new post</h3>
+<h3 class='form_page_header'>Enter details for your new post</h3>
 
 <div class='form'>
   <%= form_for [@city, @post] do |f| %>
@@ -17,9 +17,12 @@
       <%= f.text_field :photo %>
     </div>
     <br>
-    <%= f.submit %>
+    <%= f.submit "Create Post", :class => 'waves-effect waves-light btn-large' %>
   <% end %>
+  <br>
+    <%= link_to "Back", "/cities/#{@city.id}", class: "waves-effect waves-light btn-large" %>
 </div>
+
 
 
 

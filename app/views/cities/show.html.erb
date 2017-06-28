@@ -1,13 +1,16 @@
-<h2><%= @city.name %></h2>
-<%= link_to "add new post", "/cities/#{@city.id}/posts/new" %>
-
-<%= image_tag(@city.photo, alt: "Photo of Atlanta", class: "city_image") %>
+<div class='city_hero_image'></div>
+<div class='city_show_nav'>
+  <h2 class= 'city_show_name'><%= @city.name %></h2>
+  <%= link_to "add new post", "/cities/#{@city.id}/posts/new", class: "waves-effect waves-light btn-large" %>
+</div>
 
 <% @posts.each do |post| %>
-  <div>
-    <p><strong><%= link_to post.title, "/cities/#{post.city_id}/posts/#{post.id}" %></strong></p>
-    <p><%= post.content %></p>
+  <div class='city_show_posts_container'>
     <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
+    <div class='city_show_post_info'>
+      <p><strong><%= link_to post.title, "/cities/#{post.city_id}/posts/#{post.id}", class: "city_show_post_link" %></strong></p>
+      <p><%= post.content %></p>
+    </div>
   </div>
 <% end %>
 

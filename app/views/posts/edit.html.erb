@@ -1,5 +1,6 @@
-<h2>Edit Posts</h2>
+<h3 class='form_page_header'>Edit this Post</h3>
 
+<div class='form'>
 <%= form_for @post, url: {action: "update"} do |f| %>
   <label>Post title:</label><br>
   <%= text_field_tag :title, @post.title %><br>
@@ -9,6 +10,7 @@
 
   <label>Post photo:</label><br>
   <%= text_field_tag :photo, @post.photo %><br>
-<%= button_to "Update this post #{@post.city.name}", "/cities/#{@post.city_id}/posts/#{@post.id}" %>
+<%= button_to "Update this post #{@post.city.name}", "/cities/#{@post.city_id}/posts/#{@post.id}", class: 'waves-effect waves-light btn-large' %>
 
 <% end %>
+</div>

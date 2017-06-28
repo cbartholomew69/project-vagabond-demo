@@ -1,38 +1,116 @@
 
-.atlanta_image {
-  background-image: url('https://image.ibb.co/d72nHk/ATL_copy.jpg');
+.city_hero_image {
+  background-image: url('http://i.imgur.com/WwnFRvM.jpg?2');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 400px;
 }
 
 .brand-logo {
+  font-family: 'Shrikhand', cursive;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.city_image {
-  height: 200px;
-}
-
-.post_image {
-  height: 200px;
-}
-
-.post_show_container {
+.home_atlanta_link_container {
   display: flex;
+  justify-content: center;
+  .home_atlanta_link {
+    font-size: 60px;
+    font-family: 'Shrikhand', cursive;
+  }
+  .home_atlanta_link:hover {
+    text-shadow: 2px 2px #ee6e73;
+  }
+}
+
+.city_show_name {
+  font-family: 'Shrikhand', cursive;
+}
+
+.city_show_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px;
+}
+
+.city_show_posts_container {
+  display: flex;
+/*  justify-content: space-around;*/
+  align-items: flex-start;
+  margin: 25px;
 }
 
 
-.post_show_image_container {
+.city_show_post_info {
   display: flex;
   flex-direction: column;
 }
 
-.post_show_photo {
+.city_show_post_link {
+  color: black;
+  font-size: 25px;
+  &:hover {
+    text-shadow: 2px 2px #ee6e73;
+  }
+}
+
+/*.city_show_image {
+  background-image: url('http://i.imgur.com/WwnFRvM.jpg?2');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}*/
+
+.post_image {
   height: 200px;
+  width: 280px;
+  margin-right: 30px;
+}
+
+.post_show_buttons {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 125px;
+}
+
+.btn-large {
+    width: 325px;
+  }
+
+.post_show_container {
+  display: flex;
+  margin: 25px;
+}
+
+.post_show_content {
+  font-size: 18px;
+}
+
+.post_show_info {
+  margin: 15px;
+}
+
+.post_show_image_container {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+.post_show_photo {
+  height: 250px;
 }
 
 .form {
-  margin: 15px;
+  margin: 40px;
+}
+
+.form_page_header {
+  margin: 40px;
 }
