@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
+
   def home
     render 'cities/home'
   end
