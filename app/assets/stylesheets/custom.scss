@@ -1,6 +1,10 @@
-
-.city_hero_image {
+.home_page_image {
+  background-image: url(http://i.imgur.com/kXABrSc.jpg);
+}
+.atlanta_image {
   background-image: url('http://i.imgur.com/WwnFRvM.jpg?2');
+}
+.city_hero_image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -107,10 +111,35 @@
   height: 250px;
 }
 
-.form {
+.form_wrapper {
   margin: 40px;
+}
+
+.form {
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 960px;
+  padding: 15px;
 }
 
 .form_page_header {
   margin: 40px;
+}
+
+.input_field {
+  margin: 5px;
+}
+
+#form_textarea {
+  height: 300px;
+  width: 900px;
+  margin-top: 2px;
+}
+
+#post_title_field {
+  width: 900px;
+}
+
+#post_image_field {
+  width: 900px;
 }
