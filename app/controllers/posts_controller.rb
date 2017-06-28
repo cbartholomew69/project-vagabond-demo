@@ -2,6 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 
+  # def index
+  #   @posts = Post.all
+  # end
+
   def show
     @post = Post.find(params[:id])
   end
@@ -16,7 +20,19 @@ class PostsController < ApplicationController
     redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
   end
 
+<<<<<<< HEAD
 
+=======
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+  @post = Post.find(params[:id])
+  @post.update(title: params[:title], content: params[:content])
+  redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
+end
+>>>>>>> master
 
   def destroy
     @post = Post.find(params[:id])
@@ -24,5 +40,4 @@ class PostsController < ApplicationController
     @post.delete
     redirect_to city_path(@city)
   end
-
-end
+ end
