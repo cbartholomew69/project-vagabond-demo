@@ -54,6 +54,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    puts "delete now"
     @post = Post.find(params[:id])
     @city = @post.city
     @post.delete
