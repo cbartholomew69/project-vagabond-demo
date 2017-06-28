@@ -6,6 +6,9 @@ class CitiesController < ApplicationController
     @cities = City.all
   end
 
+  def new
+    @cities = City.new
+  end
 
   def show
     @city = City.friendly.find(params[:id])
