@@ -1,7 +1,7 @@
 <h2><%= @city.name %></h2>
 <%= link_to "add new post", "/cities/#{@city.id}/posts/new" %>
 
-<%= image_tag(@city.photo, alt: "Photo of Atlanta", class: "city_image") %>
+<%= image_tag(@city.photo, alt: "Photo of Atlanta", class: "city__show_image") %>
 
 <% @posts.each do |post| %>
   <div>

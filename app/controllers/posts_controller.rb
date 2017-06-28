@@ -16,11 +16,7 @@ class PostsController < ApplicationController
     redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
   end
 
-  def edit
-  end
 
-  def update
-  end
 
   def destroy
     @post = Post.find(params[:id])
