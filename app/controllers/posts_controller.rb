@@ -25,7 +25,17 @@ class PostsController < ApplicationController
                         photo: request.params["post"]["photo"])
     @post.save
 
-    redirect_to "/cities/#{@city.name.downcase}/posts/#{@post.id}"
+    # redirect_to "/cities/#{@city.name.downcase}/posts/#{@post.id}"
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to "/cities/#{@city.name.downcase}/posts/#{@post.id}", notice: "Your post about #{@city.name} was successfully created." }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def edit
