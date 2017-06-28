@@ -1,4 +1,4 @@
-<div class='city_hero_image'></div>
+<div class='city_hero_image atlanta_image'></div>
 <div class='city_show_nav'>
   <h2 class= 'city_show_name'><%= @city.name %></h2>
   <%= link_to "add new post", "/cities/#{@city.id}/posts/new", class: "waves-effect waves-light btn-large" %>
@@ -10,6 +10,7 @@
     <div class='city_show_post_info'>
       <p><strong><%= link_to post.title, "/cities/#{post.city_id}/posts/#{post.id}", class: "city_show_post_link" %></strong></p>
       <p><%= post.content %></p>
+      <p><small><%= "Posted by: #{post.user.email} at: #{post.created_at}" %></small></p>
     </div>
   </div>
 <% end %>
