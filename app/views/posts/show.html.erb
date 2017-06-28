@@ -6,6 +6,7 @@
   <div>
     <h5><%= @post.title %> | <small><%= link_to @post.city.name, city_path(@post.city.id) %></small></h5>
     <p><%= @post.content %></p>
+    <p><small><%= "Posted by: #{@post.user.email}" %></small></p>
   </div>
 </section>
 <%= button_to "Delete this post about #{@post.city.name}", "/cities/#{@post.city_id}/posts/#{@post.id}", method: 'delete', class: 'waves-effect waves-light btn-large', data: {confirm: "Are you sure you want to delete this post?"} %>
