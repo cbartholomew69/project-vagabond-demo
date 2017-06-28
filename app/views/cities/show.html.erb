@@ -5,7 +5,7 @@
 </div>
 
 <% @posts.each do |post| %>
-<a href=<%= "/cities/#{post.city.name}/posts/#{post.id}" %>>
+<a href=<%= "/cities/#{post.city.slug}/posts/#{post.id}" %>>
   <div class='city_show_posts_container'>
     <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
     <div class='city_show_post_info'>

@@ -1,0 +1,22 @@
+<div class='city_hero_image home_page_image'></div>
+<div class="city_show_nav">
+  <h4>Vagabond Cities</h4>
+  <%= link_to "Add a New City", new_city_path, class: "waves-effect waves-light btn-large" %>
+</div>
+
+
+<div class= "row cities_index_container">
+<% @cities.each do |city| %>
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag city.photo, :class => "city_card_image" %>
+        <a href=<%= "/cities/#{city.slug}" %> class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+      </div>
+      <div class="card-content">
+        <p><%= city.name %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

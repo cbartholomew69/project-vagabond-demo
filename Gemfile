@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 #For styling
 gem 'materialize-sass'
 
-gem 'jquery-turbolinks'
+
 
 #For authentication
 gem 'devise'
@@ -49,6 +49,10 @@ gem 'rails-timeago'
 
 #jquery install
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'jquery-ui-rails'
+
+gem 'jquery-turbolinks'
 
 #For pretty print routes
 gem 'friendly_id', '~> 5.1.0'
