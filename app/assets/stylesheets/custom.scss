@@ -31,6 +31,15 @@
   }
 }
 
+/*.cities_index_container {
+  display: flex;
+  justify-content: space-around;
+}*/
+
+.city_card_image {
+  height: 200px;
+}
+
 .city_show_name {
   font-family: 'Shrikhand', cursive;
 }
