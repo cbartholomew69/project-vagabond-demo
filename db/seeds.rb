@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 City.destroy_all
-City.create(id: 1, name: "Atlanta", photo: 'http://i.huffpost.com/gen/1716876/images/o-ATLANTA-TRAFFIC-facebook.jpg')
+City.create(id: 1, name: "Atlanta", photo: "http://i.imgur.com/WwnFRvM.jpg?2")
+City.create(name: "San Francisco", photo: "https://media.collegetimes.com/uploads/2014/07/sf_trolley_alt.jpg")
+City.create(name: "London", photo: "https://cdn.londonandpartners.com/visit/london-organisations/tower-bridge/63730-640x360-tower-bridge-cam-640.jpg")
 Post.create(title: "Atlanta Rocks", content: "Just visited Atlanta and had so much fun!", city_id: 1, user_id: 1, photo: "http://www.accessatlanta.com/rf/image_large/Pub/p7/AJC/2016/12/06/Images/newsEngin.17046227_091116RadarSkyline6.jpg")
 Post.create(title: "Atlanta is hot", content: "Don't visit Atlanta in the summer time with a parka", city_id: 1, user_id: 1, photo: "https://cdn.dribbble.com/users/5637/screenshots/1275438/hotlanta_1x.jpg")
 Post.create(title: "Atlanta has a great number of venues", content: "You have to check out the fox theater", city_id: 1, user_id: 2, photo: "http://www.olympiaentertainment.com/assets/img/Fox-Theatre-Orchestra.jpg")
-
 puts "created seeds"
