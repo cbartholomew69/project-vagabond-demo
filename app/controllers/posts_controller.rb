@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 
   # def index

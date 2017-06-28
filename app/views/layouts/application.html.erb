@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -15,7 +16,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#">Vagabond Cities</a></li>
           <% if user_signed_in? %>
-            <li><small>Logged in as <%= current_user.email %>.</small></li>|
+            <li><small>Logged in as <%= current_user.email %>.</small></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path %></li>|
