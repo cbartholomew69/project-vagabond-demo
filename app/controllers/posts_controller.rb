@@ -20,9 +20,7 @@ class PostsController < ApplicationController
     redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
   end
 
-<<<<<<< HEAD
 
-=======
   def edit
     @post = Post.find(params[:id])
   end
@@ -32,7 +30,7 @@ class PostsController < ApplicationController
   @post.update(title: params[:title], content: params[:content])
   redirect_to "/cities/#{@post.city_id}/posts/#{@post.id}"
 end
->>>>>>> master
+
 
   def destroy
     @post = Post.find(params[:id])
