@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 
   def index
@@ -25,11 +25,9 @@ class PostsController < ApplicationController
                         photo: request.params["post"]["photo"])
     @post.save
 
-    # redirect_to "/cities/#{@city.name.downcase}/posts/#{@post.id}"
-
     respond_to do |format|
       if @post.save
-        format.html { redirect_to "/cities/#{@city.name.downcase}/posts/#{@post.id}", notice: "Your post about #{@city.name} was successfully created." }
+        format.html { redirect_to "/cities/#{@city.slug}/posts/#{@post.id}", notice: "Your post about #{@city.name} was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -50,7 +48,7 @@ class PostsController < ApplicationController
     @post.update(title: params["post"]["title"],
                  content: params["post"]["content"],
                  photo: params["post"]["photo"])
-    redirect_to "/cities/#{@post.city.name.downcase}/posts/#{@post.id}"
+    redirect_to "/cities/#{@post.city.slug}/posts/#{@post.id}"
   end
 
   def destroy
