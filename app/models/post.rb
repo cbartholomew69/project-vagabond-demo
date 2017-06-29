@@ -5,4 +5,8 @@ class Post < ApplicationRecord
   validates :title, :content, :presence => true
   validates :title, :length => { :minimum => 1 }
   validates :title, :length => { :maximum => 200 }
+
+  validates :photo, :url => {allow_blank: true}
+
 end
+

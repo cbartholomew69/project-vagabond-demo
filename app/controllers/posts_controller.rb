@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 
+  before_action :default_post_img, :only => [:create, :update]
   def index
     @city = City.friendly.find(params[:city_id])
     redirect_to city_path(@city)
@@ -68,4 +69,11 @@ class PostsController < ApplicationController
           .permit(:title, :content, :photo)
           .merge(:user_id => current_user.id, :city_id => City.friendly.find(params[:city_id]).id)
   end
+
+  def default_post_img
+    if params[:post][:photo] == ''
+      params[:post][:photo] = 'https://www.tcmworld.org/wp-content/uploads/2015/12/fork-in-the-road-1.jpg'
+    end
+  end
+
  end
