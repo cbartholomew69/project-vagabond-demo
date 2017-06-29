@@ -1,7 +1,14 @@
 <h4 class='form_page_header'><%= "Enter details for your new post about #{@city.name}" %></h4>
 <%= render partial: 'form' %>
 
-
+<% if @post.errors.any? %>
+  <h2>Errors:</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+ <% end %>
 
 
 
