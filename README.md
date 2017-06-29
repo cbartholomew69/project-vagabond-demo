@@ -16,13 +16,13 @@ ___
 
 # Technologies Used In This Project:
 
-* Ruby on Rails is the language and framework used to help build websites and applications
+* Ruby on Rails
 
-* Postgresql for the open source relational database
+* Postgresql
 
 * Materialize for Styling
 
-* HTML/CSS for Styling
+* HTML/CSS
 
 * Devise for Authentication
 
@@ -31,6 +31,12 @@ ___
 * CANCANCAN for Authorization
 
 * Validate URL to ensure user enters a valid image URL
+
+* Trello for user stories
+
+___
+
+## [User Story Board](https://trello.com/b/q3dgQTEC/project-vagabond)
 
 ___
 
