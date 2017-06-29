@@ -1,24 +1,3 @@
-# README
+# Project Vagabond
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+View Slides https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing

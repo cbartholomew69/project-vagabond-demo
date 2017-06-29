@@ -1,3 +1,11 @@
 <h4 class="form_page_header">Add Your Favorite City</h1>
-
 <%= render partial: 'form' %>
+
+<% if @city.errors.any? %>
+  <h2>Errors:</h2>
+  <ul>
+    <% @city.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+ <% end %>
