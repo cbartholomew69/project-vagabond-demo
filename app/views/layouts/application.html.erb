@@ -16,7 +16,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><%= link_to "Vagabond Cities", cities_path %></li>
           <% if user_signed_in? %>
-            <li><small>Logged in as <%= current_user.email %>.</small></li>
+            <li><%= link_to current_user.email, user_path(current_user) %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path %></li>
