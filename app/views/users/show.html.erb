@@ -1,23 +1,15 @@
 <main class="user_show_main row">
   <div class="user_show_left_nav col s4">
-    <h5><%= @user.email %></h5>
-    <% if @user == current_user %>
-      <%= link_to "Edit My Account", edit_user_registration_path, class: "waves-effect waves-light btn" %>
-    <% end %>
-
+    <h5 class="user_show_email"><%= @user.email %></h5>
     <h6><%= "Has contributed to #{@contributions} cities:"%></h6>
-    <div class="collection">
+    <div class="collection user_show_contributions">
           <% @cities_contributed_to.each do |city| %>
           <%= link_to city.name, "/cities/#{city.slug}", class: "collection-item" %>
       <% end %>
-<!--     <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
-    <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
-    <a href="#!" class="collection-item">Alan</a>
-    <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a> -->
-  </div>
-
-
-
+    </div>
+    <% if @user == current_user %>
+      <%= link_to "Edit My Account", edit_user_registration_path, class: "waves-effect waves-light btn" %>
+    <% end %>
   </div>
 
   <div class="col s7 offset-s1">
@@ -26,12 +18,13 @@
         <a href=<%= "/cities/#{post.city.slug}/posts/#{post.id}" %>>
           <div class='z-depth-3 user_show_each_post'>
             <div class="user_show_post_title_container">
-              <h5><%= post.title %></h5>
+              <h5 class="user_show_post_title"><%= post.title %></h5>
               <small>
                 <%= post.city.name %>
               </small>
             </div>
             <p><%= truncate(post.content, :length => 85) %></p>
+            <small><%= timeago_tag post.created_at, :nojs => true %></small>
           </div>
         </a>
         <br><br>

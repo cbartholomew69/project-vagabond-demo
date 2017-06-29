@@ -13,9 +13,15 @@ class Ability
             can [:create, :update, :destroy], Post do |post|
                 post.user == user
             end
-            can [:create, :update, :destroy], City do |post|
+            can [:create, :update], City do |city|
                 user
             end
+
+        user
+            can :destroy, City do |city|
+                unless city.posts
+            end
+        end
     end
 end
 
