@@ -19,11 +19,14 @@ class PostsController < ApplicationController
   def create
     #need to fix this with strong params
     @city = City.friendly.find(params[:city_id])
-    @post = @city.posts.new(user_id: current_user.id,
-                        title: request.params["post"]["title"],
-                        content: request.params["post"]["content"],
-                        photo: request.params["post"]["photo"])
-    @post.save
+    # @post = @city.posts.new(user_id: current_user.id,
+    #                     title: request.params["post"]["title"],
+    #                     content: request.params["post"]["content"],
+    #                     photo: request.params["post"]["photo"])
+    # @post.save
+    @post = Post.new(new_post_params)
+    # @post.save
+    # sdjklsadfljkfsdjlkfsdlj
 
     respond_to do |format|
       if @post.save
@@ -57,5 +60,12 @@ class PostsController < ApplicationController
     @city = @post.city
     @post.delete
     redirect_to city_path(@city)
+  end
+
+  private
+  def new_post_params
+    params.require(:post)
+          .permit(:title, :content, :photo)
+          .merge(:user_id => current_user.id, :city_id => City.friendly.find(params[:city_id]).id)
   end
  end
