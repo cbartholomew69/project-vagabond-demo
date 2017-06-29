@@ -1,30 +1,30 @@
 <main class="user_show_main row">
-  <div class="user_show_left_nav col s4">
+  <div class="user_show_left_nav col s12 m4">
     <h5 class="user_show_email"><%= @user.email %></h5>
-    <h6><%= "Has contributed to #{@contributions} cities:"%></h6>
+    <h6 class="user_show_contributions"><%= "Has contributed to #{@contributions} cities:"%></h6>
     <div class="collection user_show_contributions">
           <% @cities_contributed_to.each do |city| %>
           <%= link_to city.name, "/cities/#{city.slug}", class: "collection-item" %>
       <% end %>
     </div>
     <% if @user == current_user %>
-      <%= link_to "Edit My Account", edit_user_registration_path, class: "waves-effect waves-light btn" %>
+      <%= link_to "Edit My Account", edit_user_registration_path, class: "waves-effect waves-light btn edit_account_button" %>
     <% end %>
   </div>
 
-  <div class="col s7 offset-s1">
+  <div class="col s12 m7 offset-m1">
     <div class="row">
       <% @posts.each do |post| %>
         <a href=<%= "/cities/#{post.city.slug}/posts/#{post.id}" %>>
           <div class='z-depth-3 user_show_each_post'>
             <div class="user_show_post_title_container">
               <h5 class="user_show_post_title"><%= post.title %></h5>
-              <small>
+              <small class="user_show_post_city">
                 <%= post.city.name %>
               </small>
             </div>
-            <p><%= truncate(post.content, :length => 85) %></p>
-            <small><%= timeago_tag post.created_at, :nojs => true %></small>
+            <p class="user_show_post_content"><%= truncate(post.content, :length => 85) %></p>
+            <small class="user_show_posted_at"><%= timeago_tag post.created_at, :nojs => true %></small>
           </div>
         </a>
         <br><br>
