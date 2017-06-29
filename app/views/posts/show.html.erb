@@ -5,7 +5,7 @@
   <div class='post_show_info'>
     <h5><%= @post.title %> | <small><%= link_to @post.city.name, city_path(@post.city) %></small></h5>
     <p class='post_show_content'><%= @post.content %></p>
-    <p><small><%= "Posted by: #{@post.user.email} " %>
+    <p><small><%= link_to "Posted by: #{@post.user.email}", user_path(@post.user) %>
     <%= timeago_tag @post.created_at, :nojs => true %></small></p>
   </div>
 </section>

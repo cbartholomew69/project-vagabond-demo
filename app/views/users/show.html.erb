@@ -3,3 +3,12 @@
 <% if @user == current_user %>
   <%= link_to "Edit My Account", edit_user_registration_path  %>
 <% end %>
+
+<div>
+<% @posts.each do |post| %>
+<h5><%= post.title %>|<small><%= post.city.name %></small></h5>
+<p><%= post.content %></p>
+<br><br>
+<% end %>
+</div>
+
