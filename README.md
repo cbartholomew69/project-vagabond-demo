@@ -59,4 +59,8 @@ ___
 * Authorization checks that ensure users can only edit and delete posts they’ve made
 ___
 
-# Links to Developer’s Github:octocat:
+# Developed By:octocat:
+[Jeffrey Henneburg](https://github.com/cbartholomew69)
+[Monica Grages](https://github.com/MonicaGrages)
+[Christy Bartholomew](https://github.com/hellajeffrey)
+
