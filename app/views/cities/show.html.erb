@@ -1,7 +1,7 @@
 <div class='city_hero_image' style="<%= "background-image: url(#{@city.photo})" %>"></div>
 <div class='city_show_nav'>
   <h2 class= 'city_show_name'><%= @city.name %></h2>
-  <%= link_to "add new post", "/cities/#{@city.name.downcase}/posts/new", class: "waves-effect waves-light btn-large" %>
+  <%= link_to "add new post", "/cities/#{@city.slug}/posts/new", class: "waves-effect waves-light btn-large" %>
 </div>
 
 <% @posts.each do |post| %>
@@ -17,3 +17,6 @@
   </div>
 </a>
 <% end %>
+
+<%= link_to "Edit the #{@city.name} Page Info", "/cities/#{@city.id}/edit", class: "waves-effect waves-light btn-large" %>
+
