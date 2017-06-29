@@ -7,7 +7,9 @@
 <% @posts.each do |post| %>
 <a href=<%= "/cities/#{post.city.slug}/posts/#{post.id}" %>>
   <div class='city_show_posts_container'>
-    <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
+    <% if post.photo %>
+      <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
+    <% end %>
     <div class='city_show_post_info'>
       <p class= 'city_show_post_link'><strong><%= post.title %></strong></p>
       <p class="city_show_post_content"><%= truncate(post.content, :length => 1000) %></p>
