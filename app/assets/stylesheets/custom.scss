@@ -48,9 +48,7 @@
 
 .city_show_posts_container {
   display: flex;
-/*  justify-content: space-around;*/
   align-items: flex-start;
-/*  border: 5px solid #333;*/
   margin: 25px;
   text-align: left;
   overflow: auto;
@@ -87,14 +85,6 @@
     text-shadow: 2px 2px #ee6e73;
   }
 }
-
-/*.city_show_image {
-  background-image: url('http://i.imgur.com/WwnFRvM.jpg?2');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-}*/
 
 .post_image {
   height: 200px;
@@ -200,3 +190,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+.user_show_post_title {
+  font-family: 'Shrikhand', cursive;
+}
+
+.user_show_email {
+  margin-bottom: 50px;
+}
+
+.user_show_contributions {
+  margin-bottom: 100px;
+}
+
+
