@@ -45,16 +45,15 @@ class CitiesController < ApplicationController
     @posts = @city.posts.order("created_at DESC")
   end
 
-end
   def destroy
     @city = City.find(params[:id])
-
-  if city.destroy
-     redirect_to post_path(@comment.post_id),
-                notice: 'City post successfully destroyed.'
+    @city.delete
+  if @city.delete
+     redirect_to cities_path,
+                notice: 'City successfully destroyed.'
   else
-    redirect_to post_path(@city.post_id),
-                alert: 'Error destroying comment.'
+    redirect_to cities_path,
+                alert: 'Error destroying city.'
   end
+ end
 end
-
