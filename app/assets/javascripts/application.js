@@ -18,3 +18,6 @@
 //= require rails-timeago-all
 //= require_tree .
 
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+})

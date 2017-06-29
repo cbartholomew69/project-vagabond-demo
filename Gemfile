@@ -48,9 +48,7 @@ gem 'cancancan'
 gem 'rails-timeago'
 
 #jquery install
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-
-gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 gem 'jquery-turbolinks'
 
