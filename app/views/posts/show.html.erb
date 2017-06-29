@@ -3,7 +3,7 @@
     <%= image_tag(@post.photo, alt: "Photo from the post #{@post.title}", class: "post_show_photo") %>
   </div>
   <div class='post_show_info'>
-    <h5><%= @post.title %> | <small><%= link_to @post.city.name, city_path(@post.city) %></small></h5>
+    <h5><%= @post.title %> | <%= link_to @post.city.name, city_path(@post.city), class: "post_show_city_link" %></h5>
     <p class='post_show_content'><%= @post.content %></p>
     <p><small><%= link_to "Posted by: #{@post.user.email}", user_path(@post.user) %>
     <%= timeago_tag @post.created_at, :nojs => true %></small></p>
