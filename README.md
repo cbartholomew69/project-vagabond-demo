@@ -8,9 +8,9 @@ A travel community for users to share city-specific tips about their favorite lo
 ___
 
 # Developed By:octocat:
-[Jeffrey Henneburg](https://github.com/cbartholomew69),
+[Christy Bartholomew](https://github.com/cbartholomew69),
 [Monica Grages](https://github.com/MonicaGrages),
-[Christy Bartholomew](https://github.com/hellajeffrey)
+[Jeffrey Henneburg](https://github.com/hellajeffrey)
 
 ___
 
