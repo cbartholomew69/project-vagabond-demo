@@ -5,13 +5,12 @@ Project Vagabond is an user-friendly app that can be used to create posts direct
 
 ___
 
-## View Slides https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing
+## [Presentation Slides](https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing)
 
 ___
 
-# Wire Frame:
-
-https://raw.githubusercontent.com/sf-wdi-30/project-vagabond/master/wireframes.png
+## Wire Frames
+![Project Vagabond Wireframes](https://raw.githubusercontent.com/sf-wdi-30/project-vagabond/master/wireframes.png "Project Vagabond Wireframes")
 
 ___
 
