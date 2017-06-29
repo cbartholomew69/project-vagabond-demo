@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -13,13 +14,14 @@
     <nav>
       <div class="nav-wrapper">
         <%= link_to "Project Vagabond", root_path, class: "brand-logo" %>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><%= link_to "Vagabond Cities", cities_path %></li>
           <% if user_signed_in? %>
-            <li><small>Logged in as <%= current_user.email %>.</small></li>
+            <li><%= link_to current_user.email, user_path(current_user) %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>|
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
             <li><%= link_to "Login", new_user_session_path  %></li>
           <% end %>
         </ul>

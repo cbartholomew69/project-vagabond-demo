@@ -1,13 +1,9 @@
 <div class='form_wrapper'>
-  <%= form_for [@city, @post] do |f| %>
+  <%= form_for @city, :url =>"/cities/#{@city.id}" do |f| %>
     <div class='form z-depth-3'>
       <div class='input-field inline'>
-        <%= f.label :title, :class => "active" %>
-        <%= f.text_field :title %>
-      </div>
-      <div class='input-field inline'>
-        <%= f.label :content, :class => "active" %>
-        <%= f.text_area :content, :id => "form_textarea" %>
+        <%= f.label :name, :class => "active" %>
+        <%= f.text_field :name %>
       </div>
       <div class='input-field inline'>
         <%= f.label :photo, "Image URL", :class => "active" %>
@@ -15,7 +11,7 @@
       </div>
       <div class='form_button_container'>
         <%= f.submit "Submit", :class => 'waves-effect waves-light btn-large' %>
-        <%= link_to "Back", "/cities/#{@city.slug}", class: "waves-effect waves-light btn-large" %>
+        <%= link_to "Back", "/cities", class: "waves-effect waves-light btn-large" %>
       </div>
     </div>
   <% end %>

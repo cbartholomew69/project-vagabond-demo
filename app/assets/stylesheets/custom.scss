@@ -27,7 +27,6 @@
   }
 }
 
-
 .city_card_image {
   height: 200px;
 }
@@ -41,6 +40,10 @@
   justify-content: space-between;
   align-items: center;
   margin: 35px;
+}
+
+.edit_city_button {
+  margin: 30px;
 }
 
 .city_show_posts_container {
@@ -172,4 +175,28 @@
   justify-content: space-between;
 }
 
+.notice {
+  font-size: 20px;
+  margin: 40px;
+}
 
+.alert {
+  font-size: 20px;
+  margin: 40px;
+}
+
+.user_show_main {
+  padding: 25px;
+}
+
+.user_show_each_post {
+  padding: 14px;
+  color: black;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.user_show_post_title_container {
+  display: flex;
+  justify-content: space-between;
+}

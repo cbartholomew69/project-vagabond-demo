@@ -1,20 +1,3 @@
+<h4 class="form_page_header">Add Your Favorite City</h1>
 
-<h3 class='form_page_header'><%= "Enter Your New City Post #{@city.name}" %></h3>
-<div class='form_wrapper'>
-  <%= form_for @city do |f| %>
-    <div class='form z-depth-3'>
-      <div class='input-field inline'>
-        <%= f.label :name, :class => "active" %>
-        <%= f.text_field :name %>
-      </div>
-      <div class='input-field inline'>
-        <%= f.label :photo, "Image URL", :class => "active" %>
-        <%= f.text_field :photo %>
-      </div>
-      <div class='form_button_container'>
-        <%= f.submit "Submit", :class => 'waves-effect waves-light btn-large' %>
-        <%= link_to "Back", "/cities", class: "waves-effect waves-light btn-large" %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render partial: 'form' %>
