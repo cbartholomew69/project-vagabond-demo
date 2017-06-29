@@ -185,4 +185,17 @@
   margin: 40px;
 }
 
+.user_show_main {
+  padding: 15px;
+}
 
+.user_show_each_post {
+  padding: 10px;
+  color: black;
+  margin: 0;
+}
+
+.user_show_post_title_container {
+  display: flex;
+  justify-content: space-between;
+}
