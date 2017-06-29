@@ -1,2 +1,5 @@
 <h4>User Show Page</h4>
 <h5><%= @user.email %></h5>
+<% if @user == current_user %>
+  <%= link_to "Edit My Account", edit_user_registration_path  %>
+<% end %>
