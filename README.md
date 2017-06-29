@@ -1,26 +1,20 @@
 
 # Project Vagabond
 
-Project Vagabond is an user-friendly app that can be used to create posts directed to the city that it is referring to. Users have the ability to sign up with an e-mail. Each users has their own profile page that displays all recent posts made by that person with most recent post first. Users also have the ability to view each city's page to see what other people have posted. Users can view what posts they may have written.
+A travel community for users to share city-specific tips about their favorite locations around the world.
+
+ Users have the ability to sign up with an e-mail. Each user has their own profile page that displays all recent posts made by that person with most recent post first. Users also have the ability to view each city's page to see what other people have posted.
 
 ___
 
-## [Presentation Slides](https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing)
+# Developed By:octocat:
+[Jeffrey Henneburg](https://github.com/cbartholomew69),
+[Monica Grages](https://github.com/MonicaGrages),
+[Christy Bartholomew](https://github.com/hellajeffrey)
 
 ___
 
-## Wire Frames
-![Project Vagabond Wireframes](https://raw.githubusercontent.com/sf-wdi-30/project-vagabond/master/wireframes.png "Project Vagabond Wireframes")
-
-___
-
-# ERD:
-![Entity Relationship Diagrams]()
-https://ga-students.slack.com/files/hellajeffrey/F5ZLQQHG9/image_uploaded_from_ios.jpg
-
-___
-
-# Technologies Used:
+# Technologies Used In This Project:
 
 * Ruby on Rails is the language and framework used to help build websites and applications
 
@@ -36,9 +30,28 @@ ___
 
 * CANCANCAN for Authorization
 
+* Validate URL to ensure user enters a valid image URL
+
 ___
 
-# Deliverables to be Completed
+
+## [Presentation Slides](https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing)
+
+___
+
+## Wire Frames
+![Project Vagabond Wireframes](https://raw.githubusercontent.com/sf-wdi-30/project-vagabond/master/wireframes.png "Project Vagabond Wireframes")
+
+___
+
+# ERD:
+![Entity Relationship Diagrams](http://i.imgur.com/ORLbb9Y.jpg)
+
+
+___
+
+
+# Deliverables
 
 * User can sign up/log in with a unique email address
 
@@ -50,17 +63,12 @@ ___
 
 * Notification that post was successfully submitted to city page
 
-* Users can use a form to update information
+* CRUD functionality on 3 models (Users, Posts, Cities)
 
-* User is able to CRUD their own posts
+* Validations that prevent users from submitting invalid data (new accounts must be unique, posts must be within 1 and 200 characters, prevents invalid image URLs)
 
-* Validations that prevent users from submitting invalid data (new accounts must be unique, posts must be within 1 and 200 characters)
-
-* Authorization checks that ensure users can only edit and delete posts they’ve made
+* Authorization checks that ensure users can only modify/delete their own content
 ___
 
-# Developed By:octocat:
-[Jeffrey Henneburg](https://github.com/cbartholomew69)
-[Monica Grages](https://github.com/MonicaGrages)
-[Christy Bartholomew](https://github.com/hellajeffrey)
+
 
