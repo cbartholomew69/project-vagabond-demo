@@ -10,13 +10,14 @@
     <%= image_tag(post.photo, alt: "Post photo", class: "post_image") %>
     <div class='city_show_post_info'>
       <p class= 'city_show_post_link'><strong><%= post.title %></strong></p>
-      <p><%= truncate(post.content, :length => 1000) %></p>
-      <p><small><%= "Posted by: #{post.user.email} " %>
+      <p class="city_show_post_content"><%= truncate(post.content, :length => 1000) %></p>
+      <p class="post_author"><small><%= "Posted by: #{post.user.email} " %>
       <%= timeago_tag post.created_at, :nojs => true %></small></p>
     </div>
   </div>
 </a>
 <% end %>
 
-<%= link_to "Edit the #{@city.name} Page Info", "/cities/#{@city.id}/edit", class: "edit_city_button waves-effect waves-light btn-large" %>
-
+<div class="city_show_button_container">
+  <%= link_to "Edit This City", "/cities/#{@city.id}/edit", class: "edit_city_button waves-effect waves-light btn-large" %>
+</div>

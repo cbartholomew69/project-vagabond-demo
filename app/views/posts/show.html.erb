@@ -3,15 +3,15 @@
     <%= image_tag(@post.photo, alt: "Photo from the post #{@post.title}", class: "post_show_photo") %>
   </div>
   <div class='post_show_info'>
-    <h5><%= @post.title %> | <%= link_to @post.city.name, city_path(@post.city), class: "post_show_city_link" %></h5>
+    <h5 class="post_show_title"><%= @post.title %><span class="pipe_separator"> | </span><%= link_to @post.city.name, city_path(@post.city), class: "post_show_city_link" %></h5>
     <p class='post_show_content'><%= @post.content %></p>
-    <p><small><%= link_to "Posted by: #{@post.user.email}", user_path(@post.user) %>
+    <p class="post_author"><small><%= link_to "Posted by: #{@post.user.email}", user_path(@post.user) %>
     <%= timeago_tag @post.created_at, :nojs => true %></small></p>
   </div>
 </section>
 <div class='post_show_buttons'>
-  <%= link_to "Update this post about #{@post.city.name}", edit_city_post_path(@post.city, @post), class: "waves-effect waves-light btn-large" %>
-  <%= button_to "Delete this post about #{@post.city.name}", "/cities/#{@post.city_id}/posts/#{@post.id}",
+  <%= link_to "Update this Post", edit_city_post_path(@post.city, @post), class: "waves-effect waves-light btn-large" %>
+  <%= button_to "Delete this Post", "/cities/#{@post.city_id}/posts/#{@post.id}",
   method: 'delete', class: 'waves-effect waves-light btn-large',
   data: {confirm: "Are you sure you want to delete this post?"} %>
 </div>
