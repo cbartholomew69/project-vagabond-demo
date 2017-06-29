@@ -15,7 +15,7 @@ ___
 ___
 
 # ERD:
-
+![Entity Relationship Diagrams]()
 https://ga-students.slack.com/files/hellajeffrey/F5ZLQQHG9/image_uploaded_from_ios.jpg
 
 ___
