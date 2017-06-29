@@ -2,16 +2,18 @@ class Ability
     include CanCan::Ability
 
     def initialize(user)
-        user
+        # user
         #this is where we could add admin privileges as a stretch goal
-            can [:create, :update, :destroy], City do |city|
-                user
-            end
+            # can [:create, :update, :destroy], City do |city|
+            #     user
+            # end
         user ||= User.new # guest user (not logged in)
             can :read, Post
             can :read, City
             can [:create, :update, :destroy], Post do |post|
-                # post.user == user
+                post.user == user
+            end
+            can [:create, :update, :destroy], City do |post|
                 user
             end
     end

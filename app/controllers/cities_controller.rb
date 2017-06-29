@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 
   def index
