@@ -45,7 +45,8 @@ ___
 
 ___
 
-## Wire Frames
+## Wire Frames and Screenshots
+![Vagabond Cities Index Page Screenshot](http://i.imgur.com/Dt84dli.png "Project Vagabond Screenshot")
 ![Project Vagabond Wireframes](https://raw.githubusercontent.com/sf-wdi-30/project-vagabond/master/wireframes.png "Project Vagabond Wireframes")
 
 ___
