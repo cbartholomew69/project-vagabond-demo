@@ -10,7 +10,7 @@ ___
 # Developed By:octocat:
 [Christy Bartholomew](https://github.com/cbartholomew69),
 [Monica Grages](https://github.com/MonicaGrages),
-[Jeffrey Henneburg](https://github.com/hellajeffrey)
+[Jeffrey Henneberg](https://github.com/hellajeffrey)
 
 ___
 
