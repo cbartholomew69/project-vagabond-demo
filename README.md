@@ -18,15 +18,15 @@ ___
 
 * Ruby on Rails
 
-* Postgresql
+* Postgresql/Active Record
 
-* Materialize for Styling
+* Materialize
 
-* HTML/CSS
+* HTML, CSS, SASS
 
 * Devise for Authentication
 
-* Time_ago was used to support automatically updating fuzzy timestamps (e.g. "4 minutes ago" or "about 1   day ago")
+* Time_ago was used for relative timestamping
 
 * CANCANCAN for Authorization
 
