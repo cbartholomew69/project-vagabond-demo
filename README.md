@@ -32,7 +32,7 @@ ___
 
 * Validate URL to ensure user enters a valid image URL
 
-* Trello for user stories
+* Trello for tracking user stories
 
 ___
 
@@ -41,7 +41,7 @@ ___
 ___
 
 
-## [Presentation Slides](https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing)
+## [Slide Deck](https://docs.google.com/presentation/d/1V7IOQj6SYODHAKNg4ntf0JkD0TgX2B1GOdGyvBJkgi0/edit?usp=sharing)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 ___
 
-# ERD:
+# Entity Relationship Diagram:
 ![Entity Relationship Diagrams](http://i.imgur.com/ORLbb9Y.jpg)
 
 
@@ -60,21 +60,17 @@ ___
 
 # Deliverables
 
-* User can sign up/log in with a unique email address
-
-* Users can view their profile page with their previously created posts
+* User can sign up/log in with email address
 
 * City page that shows all posts created by the community
 
-* Form to generate a post associated with a city page
-
-* Notification that post was successfully submitted to city page
+* Notification messages that posts were successfully created
 
 * CRUD functionality on 3 models (Users, Posts, Cities)
 
 * Validations that prevent users from submitting invalid data (new accounts must be unique, posts must be within 1 and 200 characters, prevents invalid image URLs)
 
-* Authorization checks that ensure users can only modify/delete their own content
+* Authorization to ensures users can only modify/delete their own content
 ___
 
 
