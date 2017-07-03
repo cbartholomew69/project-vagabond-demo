@@ -34,6 +34,8 @@ ___
 
 * Trello for tracking user stories
 
+* Social Share Buttons used for sharing content
+
 ___
 
 ## [User Story Board](https://trello.com/b/q3dgQTEC/project-vagabond)
