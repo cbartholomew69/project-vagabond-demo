@@ -16,6 +16,7 @@
 //= require rails-ujs
 //= require rails-timeago
 //= require rails-timeago-all
+//= require social-share-button
 //= require_tree .
 
 $( document ).ready(function(){
