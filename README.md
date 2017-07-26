@@ -1,5 +1,5 @@
 
-# [Project Vagabond Demo](https://project-vagabond-app.herokuapp.com/)(social-share-button)
+# [Project Vagabond Demo](https://project-vagabond-app.herokuapp.com/) (social-share-button)
 
 A travel community for users to share city-specific tips about their favorite locations around the world.
 
