@@ -1,9 +1,11 @@
 
-# [Project Vagabond](https://project-vagabond-app.herokuapp.com/)
+# [Project Vagabond Demo](https://project-vagabond-app.herokuapp.com/)
 
 A travel community for users to share city-specific tips about their favorite locations around the world.
 
  Users have the ability to sign up with an e-mail. Each user has their own profile page that displays all recent posts made by that person with most recent post first. Users also have the ability to view each city's page to see what other people have posted.
+ 
+ I used this project to demonstrate the use of the social share button gem. How to create a share feature in you Rails apps.
 
 ___
 
@@ -15,6 +17,8 @@ ___
 ___
 
 # Technologies Used In This Project:
+
+* Gem 'social-share-button'
 
 * Ruby on Rails
 
